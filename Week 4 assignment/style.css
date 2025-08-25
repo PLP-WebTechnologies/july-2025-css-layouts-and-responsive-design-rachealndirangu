@@ -1,0 +1,110 @@
+/* Reset some defaults */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  background: #333;
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+}
+
+/* Navigation */
+.navbar ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  background: #444;
+}
+
+.navbar li {
+  margin: 0 15px;
+}
+
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Main layout with Grid */
+.container {
+  display: grid;
+  grid-template-columns: 3fr 1fr; /* content + sidebar */
+  gap: 20px;
+  padding: 20px;
+}
+
+.content {
+  background: #f4f4f4;
+  padding: 20px;
+}
+
+.sidebar {
+  background: #ddd;
+  padding: 20px;
+}
+
+/* Cards with Flexbox */
+.cards {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: #eee;
+  padding: 20px;
+  margin: 10px;
+  flex: 1 1 200px;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Footer */
+footer {
+  background: #333;
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+}
+
+/* RESPONSIVENESS */
+
+/* Tablet */
+@media (max-width: 900px) {
+  .container {
+    grid-template-columns: 2fr 1fr;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .container {
+    grid-template-columns: 1fr; /* stack content and sidebar */
+  }
+
+  .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+  }
+}
